@@ -6,7 +6,7 @@ const dirname = getDirName(import.meta.url);
 const input = readInput(dirname, inputFileName);
 
 const solve1 = (input = "") => {
-  const rows = input.split("\n").map((row) => row.split("   ").map((n) => +n));
+  const rows = input.split("\n").map((row) => row.split("   ").map(Number));
   const left = rows.map((row) => row[0]).sort();
   const right = rows.map((row) => row[1]).sort();
   const diff = left.map((n, index) => Math.abs(n - right[index]));

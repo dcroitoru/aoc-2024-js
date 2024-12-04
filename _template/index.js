@@ -1,9 +1,10 @@
 import { getDirName, readInput } from "../shared/index.js";
 
-const inputFileName = "test-input.txt";
-// const inputFileName = "input.txt";
-const __dirname = getDirName(import.meta.url);
-const input = readInput(__dirname, inputFileName);
+const test = true;
+const LF = "\n";
+const inputFileName = test ? "test-input.txt" : "input.txt";
+const dirname = getDirName(import.meta.url);
+const input = readInput(dirname, inputFileName).trim();
 
 const solve1 = (input = "") => {};
 const solve2 = (input = "") => {};
